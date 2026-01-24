@@ -1,0 +1,33 @@
+baseurl: ""
+
+title: evo Sterling Crest - Expert in Bond Origination & Home Loans | Durban
+email: sterling@evogroup.co.za@evogroup.co.za
+description: Contact ############ from evo Sterling Crest to help you with your home loan. We are experienced property professionals specializing in home loans and property finance. We are passionate about the property industry, focusing on bonds, home loans, and origination. We are committed to excellence and building long-term relationships.
+author: Pieter Oosthuizen
+
+analytics:
+  google: G-xxx
+
+collections:
+  portfolio:
+
+markdown: kramdown
+
+webserver_headers:
+  - - Access-Control-Allow-Origin
+    - "*"
+  - - Access-Control-Allow-Methods
+    - GET, OPTIONS, HEAD
+
+logo:
+  path: /assets/img/logo/logo.png
+
+exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
+
+group: evo Homeloans
+
+company: evo Sterling Crest
+
+url: https://evohomeloans.co.za/
+
+address: 000 ##### ######## ##########, ###########, ######, 0000
