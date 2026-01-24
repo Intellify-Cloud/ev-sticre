@@ -131,22 +131,28 @@ clients:
     - title: "ABSA"
       url: https://www.absa.co.za
       logo: assets/img/clients/absa-bw.png
+
     - title: "FNB"
       url: https://www.fnb.co.za/
       logo: assets/img/clients/fnb-bw-n.png
+
+    - title: "Housing Investment Partners"
+      url: https://www.hiphousing.co.za/
+      logo: assets/img/clients/hip.jpg
+
     - title: "Investec"
       url: https://www.investec.co.za/
       logo: assets/img/clients/investec-bw.png
-    - title: "Ithala Bank"
-      url: http://www.ithala.co.za/
-      logo: assets/img/clients/ithala-bank.png
+
     - title: "Rand Merchant Bank"
       url: https://www.rmb.co.za
       logo: assets/img/clients/rmb-img-n.png
+
     - title: "Nedbank"
       url: https://www.nedbank.co.za
       logo: assets/img/clients/nedbank-bw.png
     - title: "Standard Bank"
+    
       url: https://www.standardbank.co.za/
       logo: assets/img/clients/SBSA-bw.png
 
