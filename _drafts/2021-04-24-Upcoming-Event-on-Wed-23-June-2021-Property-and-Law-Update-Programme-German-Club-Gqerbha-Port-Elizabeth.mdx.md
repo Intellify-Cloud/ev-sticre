@@ -15,7 +15,6 @@ image: https://source.unsplash.com/collection/1139349/400x300?a2
 
 ###### Arrive: 9h30 - Coffee, tea and muffins
 
-
 ###### Welcome by Vania Leonard from the Evo Group 
 
 ###### Main Speaker: Stiaan Jonker – Smith Tabata Attorneys

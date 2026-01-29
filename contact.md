@@ -5,27 +5,63 @@ background: gray
 ---
 
 <div class="container contact-us">
+
   <!-- Contact Form -->
   <div class="row mb-5">
+    {% comment %}
     <div class="col text-center">
       {% include contact.html %}
     </div>
+    {% endcomment %}
   </div>
 
-  <!-- Contact Details -->
-  <div class="row justify-content-center">
-    <div class="col-lg-6 text-center">
-      <h3>Jacqueline Almond</h3>
-      <p>Cell: <a href="tel:+27696571013">069 657 1013</a></p>
-	    <p>WhatsApp: <a href="https://wa.me/27696571013" target="_blank">Message me</a></p>
-      <p>Email: <a href="mailto:sterling@evogroup.co.za@evogroup.co.za?subject=Mail from evo Website">sterling@evogroup.co.za@evogroup.co.za</a></p>
-      <br>
-      <br>
+  <!-- Heading -->
+  <div class="row mb-4">
+    <div class="col-12 text-center">
+      <h1>Contact Sterling Crest</h1>
     </div>
   </div>
+  <br>
+  <!-- Contact Details -->
+  <div class="row justify-content-center">
+
+    <!-- Jacqueline -->
+    <div class="col-12 col-md-6 text-center mb-5">
+      <h3>Jacqueline Almond</h3>
+      <p><strong>Property Finance Specialist</strong></p>
+
+      <p>
+        Cell: <a href="tel:+27696571013">069 657 1013</a><br>
+        WhatsApp:
+        <a href="https://wa.me/27696571013" target="_blank" rel="noopener">
+          Message me
+        </a>
+      </p>
+
+      <p>
+        Email:
+        <a href="mailto:sterling@evogroup.co.za?subject=Evo%20Sterling%20Crest%20Website%20Enquiry">
+          sterling@evogroup.co.za
+        </a>
+      </p>
+    </div>
+
+    <!-- Jane -->
+    <div class="col-12 col-md-6 text-center mb-5">
+      <h3>Jane Maguire</h3>
+      <p><strong>Property Finance Specialist</strong></p>
+
+      <p>
+        Cell: <a href="tel:+27814063958">081 406 3958</a>
+      </p>
+
+      <p>
+        Email:
+        <a href="mailto:sterling@evogroup.co.za?subject=Evo%20Sterling%20Crest%20Website%20Enquiry">
+          sterling@evogroup.co.za
+        </a>
+      </p>
+    </div>
+
+  </div>
 </div>
-
-
-
-
-
