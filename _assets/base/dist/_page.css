@@ -1,17 +1,9 @@
-// ======================================================
-// IFRAME CALCULATORS – BASE
-// ======================================================
-
-iframe[class$="-calc"] {
+iframe[class$=-calc] {
   display: block;
   width: 100%;
   border: 0;
   overflow: hidden;
 }
-
-// ======================================================
-// DESKTOP DEFAULTS
-// ======================================================
 
 .bond-calc {
   height: 1050px;
@@ -37,12 +29,7 @@ iframe[class$="-calc"] {
   height: 1000px;
 }
 
-// ======================================================
-// MOBILE (≤ 640px)
-// ======================================================
-
 @media screen and (max-width: 640px) {
-
   .bond-calc {
     height: 1400px;
   }
@@ -67,15 +54,7 @@ iframe[class$="-calc"] {
     height: 1800px;
   }
 }
-
-// ✅ THIS BRACE MUST EXIST — MOBILE CLOSED
-
-// ======================================================
-// TABLET (641px – 1024px)
-// ======================================================
-
 @media screen and (min-width: 641px) and (max-width: 1024px) {
-
   .bond-calc {
     height: 1200px;
   }
@@ -88,5 +67,3 @@ iframe[class$="-calc"] {
     height: 2000px;
   }
 }
-
-// ✅ TABLET CLOSED

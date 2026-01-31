@@ -115,19 +115,13 @@ portfolio:
 about:
   title: "About Us"
   text2: "Sterling Crest is a values-driven home loan and financial services provider dedicated to helping South Africans secure optimal property finance. We specialise in home loan origination, pre-approvals, and personalised financial guidance, partnering with top banks for competitive results.<br><br>
-    Our Foundation
-    Rooted in Christian faith, Sterling Crest operates on principles of integrity, honesty, service, and stewardship. These values guide every client, partner, and stakeholder interaction, making trust and ethics our foundation.
+    **Our Foundation** - Rooted in Christian faith, Sterling Crest operates on principles of integrity, honesty, service, and stewardship. These values guide every client, partner, and stakeholder interaction, making trust and ethics our foundation.
     <br><br>
-    *Strategic Partnership*
-    Through our partnership with Evo Homeloans, clients gain access to multiple major banks via one application, expert negotiation, and a fast, efficient process — all at no cost to you.<br><br>
-    Leadership
-    Founder – Jacky Almond
-    Jacky Almond founded Sterling Crest to blend professional excellence with faith-based values. She is passionate about empowering clients with transparency, knowledge, and dedicated support throughout their property journey.
+    **Strategic Partnership** - Through our partnership with Evo Homeloans, clients gain access to multiple major banks via one application, expert negotiation, and a fast, efficient process — all at no cost to you.<br><br>
+    <strong>Leadership</strong> - Jacky Almond founded Sterling Crest to blend professional excellence with faith-based values. She is passionate about empowering clients with transparency, knowledge, and dedicated support throughout their property journey.
     <br><br>
-    KZN Business Manager – Jane Odendaal
-    Jane Odendaal manages our KwaZulu-Natal operations, focusing on excellent service, strong relationships, and reliable support for clients and referral partners across the province.<br><br>
-    *Our Commitment*
-    We build lasting relationships, promote sustainable homeownership, and conduct business with purpose and integrity. Our mission: deliver exceptional service guided by faith and driven by outstanding results."
+    <strong>KZN Business Manager</strong> – Jane Maquire Odendaal manages our KwaZulu-Natal operations, focusing on excellent service, strong relationships, and reliable support for clients and referral partners across the province.<br><br>
+    <strong>Our Commitment</strong> - We build lasting relationships, promote sustainable homeownership, and conduct business with purpose and integrity. Our mission: deliver exceptional service guided by faith and driven by outstanding results."
 
 clients:
   title: Bank Partners
@@ -170,20 +164,19 @@ team:
   section: team
   contact:
   people:
-    - name: "Jacqueline Almond"
-      role: "Property Finance Specialist"
-      image: assets/img/team/Jacqueline Almond Sterling Crest.jpg
-      social:
-        - url: tel:069 657 1013
-          icon: fas fa-phone
-        - url: mailto:sterling@evogroup.co.za@evogroup.co.za?subject=evo Sterling Crest Website Enquiry
-          icon: fas fa-envelope
+    #- name: "Jacqueline Almond"
+    #  role: "Property Finance Specialist"
+    #  image: assets/img/team/Jacqueline Almond Sterling Crest.jpg
+    #  social:
+    #    - url: tel:069 657 1013
+    #    - url: mailto:sterling@evogroup.co.za@evogroup.co.za?subject=evo Sterling Crest Website #  Enquiry
+        #  icon: fas fa-envelope
         #- url: https://www.facebook.com/Angelahomeloan
         #  icon: fab fa-facebook-f
         #- url: https://za.linkedin.com/in/Angela-macey-homeloans
         #  icon: fab fa-linkedin-in0
 
-    - name: "Jane Maguire"
+    - name: "Jane Maguire Odendaal"
       role: "Property Finance Specialist"
       image: assets/img/team/Jane Maguire Sterling Crest.jpg
       social:

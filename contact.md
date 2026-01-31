@@ -25,8 +25,10 @@ background: gray
   <!-- Contact Details -->
   <div class="row justify-content-center">
 
-    <!-- Jacqueline -->
+   {% comment %}
     <div class="col-12 col-md-6 text-center mb-5">
+      
+           <!-- Jacqueline -->
       <h3>Jacqueline Almond</h3>
       <p><strong>Property Finance Specialist</strong></p>
 
@@ -37,7 +39,7 @@ background: gray
           Message me
         </a>
       </p>
-
+ 
       <p>
         Email:
         <a href="mailto:sterling@evogroup.co.za?subject=Evo%20Sterling%20Crest%20Website%20Enquiry">
@@ -45,10 +47,10 @@ background: gray
         </a>
       </p>
     </div>
-
+   {% endcomment %}
     <!-- Jane -->
     <div class="col-12 col-md-6 text-center mb-5">
-      <h3>Jane Maguire</h3>
+      <h3>Jane Maguire Odendaal</h3>
       <p><strong>Property Finance Specialist</strong></p>
 
       <p>
