@@ -17,8 +17,8 @@ services:
       desc: "We help you check your credit record, income and expenses to give you an accurate assessment of what you can afford. You will then know how likely you are to qualify for a bond."
       icon: fas fa-tasks
       link:
-        url: tel:+27696571013
-        text: "Call: 069 657 1013"
+        url: tel:+27814063958
+        text: "Call Us"
     - title: "Have Questions?"
       desc: "I'm searching property portals and visiting show houses but have a few questions."
       icon: fas fa-search
@@ -211,7 +211,7 @@ footer:
     #  icon: "fab fa-facebook-f"
     #- url: https://za.linkedin.com/in/Angela-macey-homeloans
     #  icon: "fab fa-linkedin-in"
-    - url: https://api.whatsapp.com/send?phone=27696571013
+    - url: https://api.whatsapp.com/send?phone=27814063958
       icon: "fab fa-whatsapp"
     # - url: https://instagram.com
     #   icon: "fab fa-instagram"
