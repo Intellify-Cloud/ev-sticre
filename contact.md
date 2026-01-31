@@ -1,6 +1,6 @@
 ---
 layout: page
-title: The Bond Studio
+title: Sterling Crest Bonds
 background: gray
 ---
 
@@ -42,7 +42,7 @@ background: gray
  
       <p>
         Email:
-        <a href="mailto:sterling@evogroup.co.za?subject=Evo%20Sterling%20Crest%20Website%20Enquiry">
+        <a href="mailto:sterling@evogroup.co.za?subject=evo Sterling Crest Website Enquiry">
           sterling@evogroup.co.za
         </a>
       </p>
@@ -59,7 +59,7 @@ background: gray
 
       <p>
         Email:
-        <a href="mailto:sterling@evogroup.co.za?subject=Evo%20Sterling%20Crest%20Website%20Enquiry">
+        <a href="mailto:sterling@evogroup.co.za?subject=evo Sterling Crest Website Enquiry">
           sterling@evogroup.co.za
         </a>
       </p>
