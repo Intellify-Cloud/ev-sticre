@@ -8,11 +8,11 @@ background: gray
 
   <!-- Contact Form -->
   <div class="row mb-5">
-    {% comment %}
+
     <div class="col text-center">
       {% include contact.html %}
     </div>
-    {% endcomment %}
+
   </div>
 
   <!-- Heading -->
