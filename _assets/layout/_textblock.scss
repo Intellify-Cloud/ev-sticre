@@ -1,6 +1,7 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* =========================================================
    Text Block Section
    ========================================================= */
@@ -441,6 +442,111 @@
   }
 
 >>>>>>> Stashed changes
+=======
+// ======================================================
+// layout/_textblock.scss – Text Block / Features List
+// Clean, modern list with icons + titles
+// ======================================================
+
+.textblock-section {
+  @include section-padding;
+  background-color: $bg-color-3; // light alternating background
+
+  .container {
+    max-width: 1100px;
+  }
+
+  .section-heading {
+    @include heading-2;
+    text-transform: none; // override if needed
+  }
+
+  .textblock-subheading {
+    @include muted-text;
+    max-width: 720px;
+    margin: 0 auto $gap-xl auto;
+    text-align: center;
+  }
+
+  // Main content wrapper
+  .textblock-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  // Each item row
+  .textblock-item {
+    display: flex;
+    align-items: flex-start;
+    gap: $gap-lg;
+    margin-bottom: $gap-xl;
+    padding: $gap-md;
+    border-radius: $border-radius;
+    background: $bg-color-1;
+    box-shadow: $shadow-sm;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-md;
+      background: rgba($primary, 0.02);
+    }
+
+    // Icon column
+    .textblock-icon {
+      flex: 0 0 60px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: $primary;
+      background: rgba($primary, 0.08);
+      border-radius: $border-radius-sm;
+    }
+
+    // Title + optional description
+    .textblock-title-wrapper {
+      flex: 1;
+
+      .textblock-title {
+        @include heading-3;
+        margin: 0 0 0.5rem;
+        color: $font-color-1;
+        line-height: 1.4;
+      }
+
+      .textblock-desc {
+        @include body-text;
+        color: $font-color-3;
+        margin: 0;
+      }
+    }
+  }
+
+  // Optional footer text
+  .textblock-footer {
+    @include muted-text;
+    text-align: center;
+    margin-top: $gap-xl;
+    font-style: italic;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// ────────────────────────────────────────
+// RESPONSIVE ADJUSTMENTS
+// ────────────────────────────────────────
+@include respond-to(mobile) {
+  .textblock-section {
+    padding-top: $section-padding-y-mobile;
+    padding-bottom: $section-padding-y-mobile;
+  }
+
+>>>>>>> Stashed changes
   .textblock-item {
     flex-direction: column;
     align-items: center;
@@ -453,6 +559,9 @@
     }
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
