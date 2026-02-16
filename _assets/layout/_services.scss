@@ -1,182 +1,137 @@
-/* Services Section Styling */
+// ======================================================
+// layout/_services.scss – Services Section
+// Clean, Material-inspired cards + golden ratio spacing
+// ======================================================
+
 .services-section {
-  padding: 5rem 0;
-  background-color: #f8f9fa;
+  @include section-padding;
+  background-color: $bg-color-2; // slightly deeper background for contrast
 
   .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
   }
 
   .section-heading {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    letter-spacing: 2px;
+    @include heading-2;
   }
 
   .section-subheading {
-    font-size: 1.2rem;
-    color: #64748b;
-    max-width: 600px;
-    margin: 0 auto 4rem;
+    @include muted-text;
+    max-width: 680px;
+    margin: 0 auto $gap-xl auto;
   }
 
-  .text-center {
-    text-align: center;
+  // Main services grid
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $gap-lg;
+    margin-top: $gap-xl;
   }
 
-  .text-muted {
-    color: #64748b;
-  }
-}
+  // Individual service card
+  .card {
+    @include card-elevated;           // uses our mixin: shadow + hover lift
+    background: $bg-color-1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;                     // cards stretch to equal height
+    overflow: hidden;
+    position: relative;
 
-/* Simple Services Grid */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  align-items: stretch;
-}
+    // Optional top accent bar (using primary color)
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: $color-btn-1;
+      transition: all 0.4s ease;
+    }
 
-/* Service Cards - SIMPLE VERSION */
-.card {
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border: none;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+    &:hover::before {
+      height: 6px;
+      background: linear-gradient(90deg, $color-btn-1, $color-btn-2);
+    }
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    // background: linear-gradient(90deg, #00acc8, #0288d1);
-    border-radius: 20px 20px 0 0;
-  }
+    // Card body – flex column so button pushes to bottom
+    .card-body {
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      text-align: center;
+    }
 
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-  }
-}
+    // Service title
+    .service-heading {
+      @include heading-3;
+      margin: 0 0 1.25rem;
+      min-height: 3.2rem; // consistent height for alignment
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-/* Card Body - SIMPLE FLEX */
-.card-body {
-  padding: 3rem 2rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  position: relative;
-}
+    // Description
+    .service-description {
+      @include body-text;
+      color: $font-color-3;
+      margin-bottom: 2rem;
+      flex: 1; // grows to fill space
+    }
 
-/* Icon Styling */
-.fa-stack {
-  margin-bottom: 2rem;
-}
+    // CTA button – pushed to bottom
+    .btn {
+      @include btn-primary;
+      margin-top: auto; // pushes to bottom of card
+      padding: 0.85rem 2rem;
+      font-size: 1rem;
+    }
 
-.fa-stack-2x {
-  background: linear-gradient(135deg, #00acc8, #0288d1);
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.fa-stack-1x {
-  font-size: 2rem;
-  color: white;
-}
-
-/* Card Content */
-.service-heading {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #2d3748;
-  min-height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.service-description {
-  color: #64748b;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  flex: 1; /* This makes the description area flexible */
-}
-
-/* Service Button */
-.btn {
-  background: linear-gradient(135deg, #00acc8, #0288d1);
-  color: white;
-  padding: 0.75rem 2rem;
-  border: none;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-  margin-top: auto; /* This pushes the button to the bottom */
-
-  &:hover {
-    background: linear-gradient(135deg, #0288d1, #0277bd);
-    transform: translateY(-1px);
-    color: white;
-    text-decoration: none;
+    // Optional icon container (if you add icons later)
+    .service-icon {
+      font-size: 3.5rem;
+      color: $color-btn-1;
+      margin-bottom: 1.5rem;
+      line-height: 1;
+    }
   }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+// ────────────────────────────────────────
+// RESPONSIVE ADJUSTMENTS
+// ────────────────────────────────────────
+@include respond-to(mobile) {
   .services-section {
-    padding: 3rem 0;
+    padding-top: $section-padding-y-mobile;
+    padding-bottom: $section-padding-y-mobile;
   }
 
   .services {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: $gap-md;
   }
 
-  .card-body {
-    padding: 2rem 1.5rem;
-  }
+  .card {
+    .card-body {
+      padding: 2rem 1.5rem;
+    }
 
-  .fa-stack-2x {
-    width: 80px;
-    height: 80px;
-  }
+    .service-heading {
+      font-size: 1.6rem;
+    }
 
-  .fa-stack-1x {
-    font-size: 1.5rem;
+    .btn {
+      padding: 0.8rem 1.8rem;
+    }
   }
 }
 
-@media (max-width: 480px) {
-  .services-section .container {
-    padding: 0 0.75rem;
-  }
-
-  .card-body {
-    padding: 1.5rem 1rem;
-  }
-
-  .btn {
-    padding: 0.625rem 1.5rem;
-    font-size: 0.9rem;
+@include respond-to(tablet) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

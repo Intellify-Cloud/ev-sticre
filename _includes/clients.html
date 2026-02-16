@@ -1,4 +1,4 @@
-<section class="bg-light page-section py-30 position-relative" id="clients">
+<section class="page-section py-30 position-relative" id="clients">
 
 
   <div class="container">
@@ -12,7 +12,7 @@
         </h3>
       </div>
     </div>
-    <div class="row justify-content-center mt-4 flex-wrap gap-3">
+    <div class="row justify-content-center mt-4 flex-nowrap gap-3">
       {% for client in site.data.sitetext.clients.list %}
       <div class="client-logo-card d-flex align-items-center justify-content-center">
         <a href="{{ client.url | default: '#' }}">

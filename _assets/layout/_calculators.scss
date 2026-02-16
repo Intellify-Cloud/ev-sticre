@@ -1,253 +1,157 @@
-/* Calculators Section Styling */
+// layout/_calculators.scss
+// Fully uses centralized design tokens & mixins
+
 .calculators-section {
-  padding: 5rem 0;
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
+  @include section-padding;
+  background: $bg-color-1;
 
-  .row {
-    margin-bottom: 4rem;
-  }
-
-  .section-heading {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--text-color); /* Dynamic text color */
-    background-color: var(--bg-color); /* Dynamic background */
-  }
-
-  .section-subheading {
-    font-size: 1.2rem;
-    color: #64748b;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .text-center {
-    text-align: center;
-  }
-
-  .text-uppercase {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-
-  .text-muted {
-    color: #64748b;
+  &--alt,
+  &--secondary {
+    background: $bg-color-3;
   }
 }
 
-/* Calculators Grid */
+.section-header {
+  max-width: 800px;
+  margin: 0 auto $gap-xl;
+  text-align: center;
+}
+
+.section-heading {
+  @include heading-2;
+  margin-bottom: $gap-md;
+}
+
+.section-subheading {
+  @include muted-text;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
 .calculators-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  align-items: stretch; /* Equal height cards */
+  grid-template-columns: 1fr;
+  gap: $gap-lg;
+  margin-top: $gap-xl;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-/* Calculator Cards */
 .calculator-card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  border: none;
+  @include card-elevated;
+  background: $bg-color-1;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Equal height cards */
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #00acc8, #0288d1);
-  }
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
+    box-shadow: $shadow-xl;
 
-    .icon-bg::before {
-      opacity: 1;
-      animation: shimmer 0.8s ease-out;
+    .icon-bg {
+      background: rgba($primary, 0.15);
+      transform: scale(1.08);
     }
+
+    .btn-calculate {
+      background: $color-btn-1-hover;
+      box-shadow: $shadow-lg;
+
+      i {
+        transform: translateX(6px);
+      }
+    }
+  }
+
+  &:focus-within {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
   }
 }
 
-/* Card Body */
 .card-body {
-  padding: 3rem 2rem;
-  text-align: center;
-  border: none;
-  flex: 1; /* Takes up available space for equal height */
+  padding: 2.5rem 2rem 1.5rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* Icon Styling */
 .icon-wrapper {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 2rem;
+  margin-bottom: $gap-lg;
 }
 
 .icon-bg {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #00acc8, #0288d1);
+  width: 100px;
+  height: 100px;
+  background: rgba($primary, 0.08);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
+  transition: all 0.3s ease;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transform: rotate(45deg);
-    transition: all 0.5s;
-    opacity: 0;
+  .card-icon {
+    font-size: 2.8rem;
+    color: $primary;
   }
 }
 
-.card-icon {
-  font-size: 2rem;
-  color: white;
-  z-index: 1;
-  position: relative;
-}
-
-/* Card Content */
 .card-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #2d3748;
-  min-height: 3.5rem; /* Ensures consistent title height */
+  @include heading-3;
+  margin: 0 0 1rem;
+  min-height: 3em;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1.3;
 }
 
 .card-description {
-  color: #64748b;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+  @include body-text;
+  color: $font-color-3;
+  margin: 0 0 $gap-md;
+  flex: 1;
+  text-align: center;
 }
 
-/* Card Footer */
 .card-footer {
   padding: 0 2rem 2rem;
+  background: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
   text-align: center;
-  border: none;
-  background: none;
 }
 
-/* Calculator Button */
-.calculator-btn {
+.btn-calculate {
+  @include btn-primary;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: linear-gradient(135deg, #00acc8, #0288d1);
-  color: white;
-  padding: 0.75rem 2rem;
-  border: none;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
+  gap: 0.75rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.05rem;
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
   transition: all 0.3s ease;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 172, 200, 0.3);
-
-  &:hover {
-    background: linear-gradient(135deg, #0288d1, #0277bd);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 15px rgba(0, 172, 200, 0.25);
-    color: white;
-    text-decoration: none;
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
 
   i {
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
   }
 
-  &:hover i {
-    transform: translateX(2px);
-  }
-}
-
-/* Shimmer Animation */
-@keyframes shimmer {
-  0% { 
-    transform: translateX(-100%) translateY(-100%) rotate(45deg); 
-  }
-  100% { 
-    transform: translateX(100%) translateY(100%) rotate(45deg); 
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .calculators-section {
-    padding: 3rem 0;
-
-    .row {
-      margin-bottom: 3rem;
-    }
+  &:hover {
+    background: $color-btn-1-hover;
   }
 
-  .calculators-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .card-body {
-    padding: 2rem 1.5rem;
-  }
-
-  .icon-bg {
-    width: 60px;
-    height: 60px;
-  }
-
-  .card-icon {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .calculators-section .container {
-    padding: 0 0.75rem;
-  }
-
-  .card-body {
-    padding: 1.5rem 1rem;
-  }
-
-  .calculator-btn {
-    padding: 0.625rem 1.5rem;
-    font-size: 0.9rem;
+  &:focus {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
   }
 }

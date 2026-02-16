@@ -1,8 +1,14 @@
 baseurl: ""
 
+<<<<<<< Updated upstream
 title: Sterling Crest - Expert in Bond Origination & Home Loans | Durban
 email: sterling@evogroup.co.za
 description: Contact Jacky and Jane from Sterling Crest to help you with your home loan. We are experienced property professionals specializing in home loans and property finance. We are passionate about the property industry, focusing on bonds, home loans, and origination. We are committed to excellence and building long-term relationships.
+=======
+title: evo Sterling Crest - Expert in Bond Origination & Home Loans | Durban
+email: sterling@evogroup.co.za
+description: Contact ############ from evo Sterling Crest to help you with your home loan. We are experienced property professionals specializing in home loans and property finance. We are passionate about the property industry, focusing on bonds, home loans, and origination. We are committed to excellence and building long-term relationships.
+>>>>>>> Stashed changes
 author: Pieter Oosthuizen
 
 analytics:
@@ -26,6 +32,7 @@ exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
 
 group: evo Homeloans
 
+<<<<<<< Updated upstream
 company: Sterling Crest
 
 url: https://evohomeloans.co.za/
@@ -33,3 +40,10 @@ url: https://evohomeloans.co.za/
 address: Durban, KZN
 
 broadsheetApiUrl: https://ca-broadsheet-webapi.mangodesert-1e0c2940.westeurope.azurecontainerapps.io/
+=======
+evo_url: https://www.evohomeloans.co.za
+
+company: evo Sterling Crest
+
+address: 000 ##### ######## ##########, ###########, ######, 0000
+>>>>>>> Stashed changes

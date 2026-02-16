@@ -1,43 +1,72 @@
-  <!-- Footer -->
-  <footer class="footer" id="footer" style="background-color:white;">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; {{ site.company }} {{ 'now' | date: "%Y" }}</span>
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <!-- Brand / about -->
+      <div class="footer-brand">
+        <a href="{{ site.baseurl }}/" class="logo">
+          {% if site.logo %}
+            <img src="{{ site.logo.path }}" alt="{{ site.title }}">
+          {% else %}
+            <span class="site-title">{{ site.title }}</span>
+          {% endif %}
+        </a>
+        <!-- <p class="tagline">{{ site.description | default: "Professional property finance solutions" }}</p> -->
+      </div>
+
+      <!-- Quick links -->
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#calculators">Calculators</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- More links (e.g. legal) -->
+      <div class="footer-links">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Use</a></li>
+          <!-- <li><a href="/blog">Blog</a></li> -->
+        </ul>
+      </div>
+
+      <!-- Contact & social -->
+      <div class="footer-contact">
+        <h5>Get in Touch</h5>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div class="info">
+            <a href="tel:+2781406395">+27 81 406 395</a>
+          </div>
         </div>
-        <!-- Social Media -->
-        <div class="col-md-4">
-          <ul class="list-inline social-buttons">
-            {% for link in site.data.sitetext.footer.social  %}
-            <li class="list-inline-item">
-              {% if link.url %}
-              <a href="{{ link.url }}">
-                {% if link.icon %}<i class="{{ link.icon }}"></i>{% endif %}
-              </a>
-              {% endif %}
-            </li>
-            {% endfor %}
-          </ul>
-          <a href="/privacy-statement" target="_blank">Privacy Statement | </a><a href="/data-sharing-agreement"
-            target="_blank">Data Sharing</a>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <div class="info">
+            <a href="mailto:sterling@evogroup.co.za">sterling@evogroup.co.za</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="info">
+            <p>Durban, KwaZulu-Natal</p>
+          </div>
         </div>
 
-        <!-- Legal -->
-        <div class="col-md-4">
-          <ul class="list-inline quicklinks">
-            <li class="list-inline-item">
-              <a href="https://www.evohomeloans.co.za"
-                target="_blank">{{ site.data.sitetext.footer.legal | default: "" }}</a>
-            </li>
-          </ul>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/1C9Dt4PnqU/"><i class="fab fa-facebook-f"></i></a>
+          <!-- <a href="#"><i class="fab fa-linkedin-in"></i></a> -->
+          <!-- <a href="#"><i class="fab fa-instagram"></i></a> -->
+          <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
         </div>
       </div>
     </div>
-  </footer>
-  {% if page.layout == "page" %}
-  <script>
-    fixPageShort();
 
+<<<<<<< Updated upstream
     function fixPageShort() {
       if (window.innerHeight > document.body.offsetHeight) {
         document.getElementById("footer").style.position = "fixed";
@@ -55,5 +84,23 @@
       <h4><i class="fab fa-whatsapp fa-2x " aria-hidden="true"></i></h4>Chat
     </a>
     <!-- <a href="https://api.whatsapp.com/send?phone=15551234567">Send Message</a> -->
+=======
+<div class="footer-bottom">
+  <p>&copy; {{ 'now' | date: "%Y" }} {{ site.company }} - Expert in Bond Origination & Home Loans | Durban. All rights reserved. Powered by <a href="{{ site.evo_url }}">{{ site.group }}</a>.</p>
+</div>
+    <!-- Floating WhatsApp Chat Button -->
+<div class="whatsapp-float">
+  <a 
+    href="https://api.whatsapp.com/send?phone=27814063958&text=Hi%20Sterling%20Crest%2C%20I%20need%20help%20with%20a%20home%20loan" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    aria-label="Chat with us on WhatsApp"
+  >
+    <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">Chat with us</span>
+  </a>
+</div>
+>>>>>>> Stashed changes
   </div>
-  <!-- End Footer -->
+  
+</footer>
