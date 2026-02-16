@@ -36,18 +36,8 @@
     // LOGO Padding and Size 
     img {
       height: 80px;
-<<<<<<< Updated upstream
       margin-right: 0.5rem;
       padding: 1px;
-=======
-      width: auto;
-      max-height: 80px;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.05);
-      }
->>>>>>> Stashed changes
     }
 
     &:hover,
