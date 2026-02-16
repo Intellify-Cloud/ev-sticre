@@ -5,6 +5,7 @@ background: gray
 ---
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <div class="container contact-us">
 
   <!-- Contact Form -->
@@ -70,6 +71,9 @@ background: gray
 </div>
 =======
   <!-- Contact Details -->
+=======
+  <!-- Contact Details -->
+>>>>>>> Stashed changes
   <div class="row justify-content-center py-30">
     <div class="col-lg-6 text-center">
       <h3>Jane Maguire Odendaal</h3>
@@ -79,4 +83,7 @@ background: gray
       <br>
     </div>
   </div>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

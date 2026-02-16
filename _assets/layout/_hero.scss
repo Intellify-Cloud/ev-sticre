@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 // Golden ratio constant
 $phi: 1.6180339887;
 $phi-inverse: 0.6180339887;   // ≈ 61.8%
@@ -6,10 +7,15 @@ $phi-inverse: 0.6180339887;   // ≈ 61.8%
 // Base spacing unit (feel free to adjust)
 $base-spacing: 1.5rem;
 =======
+=======
+>>>>>>> Stashed changes
 // ======================================================
 // layout/_hero.scss – Modern Hero / Masthead
 // Material-inspired + Golden Ratio proportions
 // ======================================================
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 header.masthead {
@@ -18,8 +24,13 @@ header.masthead {
   align-items: center;
   justify-content: center;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   min-height: 85vh;
   height: 90vh;                 // modern full-ish hero feel
+=======
+  min-height: 80vh;
+  height: 90vh;
+>>>>>>> Stashed changes
 =======
   min-height: 80vh;
   height: 90vh;
@@ -33,7 +44,11 @@ header.masthead {
   overflow: hidden;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   // Dark overlay
+=======
+  // Darker overlay for better text contrast (modern trend)
+>>>>>>> Stashed changes
 =======
   // Darker overlay for better text contrast (modern trend)
 >>>>>>> Stashed changes
@@ -42,7 +57,11 @@ header.masthead {
     position: absolute;
     inset: 0;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     background: rgba(0, 0, 0, 0.38);   // slightly stronger for contrast
+=======
+    background: rgba(15, 23, 42, 0.55); // deep slate overlay – works with $font-color-1
+>>>>>>> Stashed changes
 =======
     background: rgba(15, 23, 42, 0.55); // deep slate overlay – works with $font-color-1
 >>>>>>> Stashed changes
@@ -52,6 +71,7 @@ header.masthead {
   .container {
     position: relative;
     z-index: 2;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     width: 100%;
     max-width: 1100px;
@@ -98,6 +118,11 @@ header.masthead {
     max-width: 1200px;
     padding: 0 1.5rem;
     width: 100%;
+=======
+    max-width: 1200px;
+    padding: 0 1.5rem;
+    width: 100%;
+>>>>>>> Stashed changes
   }
 
   .intro-text {
@@ -139,11 +164,15 @@ header.masthead {
     padding: $gap-xl;
     border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: $shadow-md;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   }
 }
 
 // ────────────────────────────────────────
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 // Breakpoints – cleaner, more modern sizing
 // ────────────────────────────────────────
@@ -180,18 +209,24 @@ header.masthead {
     height: 80vh;
     min-height: 70vh;
 =======
+=======
+>>>>>>> Stashed changes
 // RESPONSIVE BREAKPOINTS
 // ────────────────────────────────────────
 @include respond-to(mobile) {
   header.masthead {
     min-height: 70vh;
     height: 85vh;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     align-items: center;
   }
 
   .intro-text {
     padding: 0 1rem;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   }
 
@@ -201,6 +236,8 @@ header.masthead {
 
 @media (max-width: 480px) {
 =======
+=======
+>>>>>>> Stashed changes
     gap: $gap-md;
   }
 
@@ -251,14 +288,23 @@ header.masthead {
 
 // Extra-large screens
 @media (min-width: 1400px) {
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   header.masthead {
     height: 75vh;
   }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   .intro-heading   { font-size: clamp(2rem, 8vw, 2.9rem); }
   .intro-lead-in   { font-size: clamp(1rem, 3.5vw, 1.35rem); }
+=======
+  .intro-heading {
+    font-size: clamp(5rem, 6vw, 7.5rem);
+  }
+>>>>>>> Stashed changes
 =======
   .intro-heading {
     font-size: clamp(5rem, 6vw, 7.5rem);

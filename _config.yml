@@ -33,6 +33,7 @@ exclude: [node_modules, webpack-config.js, package.json, package-lock.json]
 group: evo Homeloans
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 company: Sterling Crest
 
 url: https://evohomeloans.co.za/
@@ -45,5 +46,11 @@ evo_url: https://www.evohomeloans.co.za
 
 company: evo Sterling Crest
 
+=======
+evo_url: https://www.evohomeloans.co.za
+
+company: evo Sterling Crest
+
+>>>>>>> Stashed changes
 address: 000 ##### ######## ##########, ###########, ######, 0000
 >>>>>>> Stashed changes
