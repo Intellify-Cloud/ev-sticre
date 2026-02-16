@@ -1,5 +1,6 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 // Golden ratio constant
 $phi: 1.6180339887;
 $phi-inverse: 0.6180339887;   // ≈ 61.8%
@@ -9,11 +10,16 @@ $base-spacing: 1.5rem;
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 // ======================================================
 // layout/_hero.scss – Modern Hero / Masthead
 // Material-inspired + Golden Ratio proportions
 // ======================================================
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -25,8 +31,13 @@ header.masthead {
   justify-content: center;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   min-height: 85vh;
   height: 90vh;                 // modern full-ish hero feel
+=======
+  min-height: 80vh;
+  height: 90vh;
+>>>>>>> Stashed changes
 =======
   min-height: 80vh;
   height: 90vh;
@@ -45,7 +56,11 @@ header.masthead {
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   // Dark overlay
+=======
+  // Darker overlay for better text contrast (modern trend)
+>>>>>>> Stashed changes
 =======
   // Darker overlay for better text contrast (modern trend)
 >>>>>>> Stashed changes
@@ -58,7 +73,11 @@ header.masthead {
     inset: 0;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     background: rgba(0, 0, 0, 0.38);   // slightly stronger for contrast
+=======
+    background: rgba(15, 23, 42, 0.55); // deep slate overlay – works with $font-color-1
+>>>>>>> Stashed changes
 =======
     background: rgba(15, 23, 42, 0.55); // deep slate overlay – works with $font-color-1
 >>>>>>> Stashed changes
@@ -71,6 +90,7 @@ header.masthead {
   .container {
     position: relative;
     z-index: 2;
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
     width: 100%;
@@ -123,6 +143,11 @@ header.masthead {
     padding: 0 1.5rem;
     width: 100%;
 >>>>>>> Stashed changes
+=======
+    max-width: 1200px;
+    padding: 0 1.5rem;
+    width: 100%;
+>>>>>>> Stashed changes
   }
 
   .intro-text {
@@ -165,6 +190,9 @@ header.masthead {
     border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: $shadow-md;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -172,6 +200,7 @@ header.masthead {
 }
 
 // ────────────────────────────────────────
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 // Breakpoints – cleaner, more modern sizing
@@ -211,6 +240,8 @@ header.masthead {
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 // RESPONSIVE BREAKPOINTS
 // ────────────────────────────────────────
 @include respond-to(mobile) {
@@ -218,6 +249,9 @@ header.masthead {
     min-height: 70vh;
     height: 85vh;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -228,6 +262,7 @@ header.masthead {
     padding: 0 1rem;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   }
 
   .intro-heading   { font-size: clamp(2.4rem, 7vw, 3.6rem); line-height: 1.15; }
@@ -236,6 +271,8 @@ header.masthead {
 
 @media (max-width: 480px) {
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     gap: $gap-md;
@@ -289,6 +326,9 @@ header.masthead {
 // Extra-large screens
 @media (min-width: 1400px) {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -298,8 +338,14 @@ header.masthead {
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   .intro-heading   { font-size: clamp(2rem, 8vw, 2.9rem); }
   .intro-lead-in   { font-size: clamp(1rem, 3.5vw, 1.35rem); }
+=======
+  .intro-heading {
+    font-size: clamp(5rem, 6vw, 7.5rem);
+  }
+>>>>>>> Stashed changes
 =======
   .intro-heading {
     font-size: clamp(5rem, 6vw, 7.5rem);
