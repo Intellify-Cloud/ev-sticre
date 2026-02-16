@@ -1,4 +1,3 @@
-
 /* =========================================================
    Text Block Section
 */
@@ -39,27 +38,23 @@
 
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.06);
 
-  /* Changed / added for centering the content inside the card */
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;           // keeps text readable / left-aligned
+  text-align: left;
 }
 
 /* =========================================================
    Checklist Rows
-   ========================================================= */
+========================================================= */
 
 .textblock-heading .row {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-
   margin: 0 0 1.35rem;
-
-  /* Key changes: constrain and center each row */
-  max-width: 720px;           // matches subheading width – feels balanced
-  width: 100%;                // grows responsively but never too wide
+  max-width: 720px;
+  width: 100%;
 }
 
 .textblock-heading .row:last-child {
@@ -68,7 +63,7 @@
 
 /* =========================================================
    Icon Column
-   ========================================================= */
+========================================================= */
 
 .textblock-image {
   flex: 0 0 1.75rem;
@@ -84,10 +79,10 @@
 
 /* =========================================================
    Text Content
-   ========================================================= */
+========================================================= */
 
 .textblock-title {
-  max-width: 720px;           // consistent with row width
+  max-width: 720px;
   font-size: 1.05rem;
   line-height: 1.65;
   font-weight: 500;
@@ -96,7 +91,7 @@
 
 /* =========================================================
    Footer Line
-   ========================================================= */
+========================================================= */
 
 .text-muted {
   margin-top: 2.75rem;
@@ -109,7 +104,7 @@
 
 /* =========================================================
    Responsive Refinements
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 768px) {
   .textblock-heading {
@@ -122,16 +117,18 @@
 
   .textblock-heading .row {
     gap: 0.75rem;
-    max-width: 100%;          // full width on mobile is usually better
+    max-width: 100%;
+  }
+}
 
-// ======================================================
-// layout/_textblock.scss – Text Block / Features List
-// Clean, modern list with icons + titles
-// ======================================================
+
+/* ======================================================
+   layout/_textblock.scss – Text Block / Features List
+====================================================== */
 
 .textblock-section {
   @include section-padding;
-  background-color: $bg-color-3; // light alternating background
+  background-color: $bg-color-3;
 
   .container {
     max-width: 1100px;
@@ -139,7 +136,7 @@
 
   .section-heading {
     @include heading-2;
-    text-transform: none; // override if needed
+    text-transform: none;
   }
 
   .textblock-subheading {
@@ -149,13 +146,11 @@
     text-align: center;
   }
 
-  // Main content wrapper
   .textblock-content {
     max-width: 900px;
     margin: 0 auto;
   }
 
-  // Each item row
   .textblock-item {
     display: flex;
     align-items: flex-start;
@@ -173,7 +168,6 @@
       background: rgba($primary, 0.02);
     }
 
-    // Icon column
     .textblock-icon {
       flex: 0 0 60px;
       width: 60px;
@@ -187,7 +181,6 @@
       border-radius: $border-radius-sm;
     }
 
-    // Title + optional description
     .textblock-title-wrapper {
       flex: 1;
 
@@ -206,7 +199,6 @@
     }
   }
 
-  // Optional footer text
   .textblock-footer {
     @include muted-text;
     text-align: center;
@@ -218,526 +210,11 @@
   }
 }
 
-// ────────────────────────────────────────
-// RESPONSIVE ADJUSTMENTS
-// ────────────────────────────────────────
-@include respond-to(mobile) {
-  .textblock-section {
-    padding-top: $section-padding-y-mobile;
-    padding-bottom: $section-padding-y-mobile;
-  }
 
-=======
-// ======================================================
-// layout/_textblock.scss – Text Block / Features List
-// Clean, modern list with icons + titles
-// ======================================================
+/* ======================================================
+   RESPONSIVE ADJUSTMENTS
+====================================================== */
 
-.textblock-section {
-  @include section-padding;
-  background-color: $bg-color-3; // light alternating background
-
-  .container {
-    max-width: 1100px;
-  }
-
-  .section-heading {
-    @include heading-2;
-    text-transform: none; // override if needed
-  }
-
-  .textblock-subheading {
-    @include muted-text;
-    max-width: 720px;
-    margin: 0 auto $gap-xl auto;
-    text-align: center;
-  }
-
-  // Main content wrapper
-  .textblock-content {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  // Each item row
-  .textblock-item {
-    display: flex;
-    align-items: flex-start;
-    gap: $gap-lg;
-    margin-bottom: $gap-xl;
-    padding: $gap-md;
-    border-radius: $border-radius;
-    background: $bg-color-1;
-    box-shadow: $shadow-sm;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: $shadow-md;
-      background: rgba($primary, 0.02);
-    }
-
-    // Icon column
-    .textblock-icon {
-      flex: 0 0 60px;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.2rem;
-      color: $primary;
-      background: rgba($primary, 0.08);
-      border-radius: $border-radius-sm;
-    }
-
-    // Title + optional description
-    .textblock-title-wrapper {
-      flex: 1;
-
-      .textblock-title {
-        @include heading-3;
-        margin: 0 0 0.5rem;
-        color: $font-color-1;
-        line-height: 1.4;
-      }
-
-      .textblock-desc {
-        @include body-text;
-        color: $font-color-3;
-        margin: 0;
-      }
-    }
-  }
-
-  // Optional footer text
-  .textblock-footer {
-    @include muted-text;
-    text-align: center;
-    margin-top: $gap-xl;
-    font-style: italic;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-// ────────────────────────────────────────
-// RESPONSIVE ADJUSTMENTS
-// ────────────────────────────────────────
-@include respond-to(mobile) {
-  .textblock-section {
-    padding-top: $section-padding-y-mobile;
-    padding-bottom: $section-padding-y-mobile;
-  }
-
-// ======================================================
-// layout/_textblock.scss – Text Block / Features List
-// Clean, modern list with icons + titles
-// ======================================================
-
-.textblock-section {
-  @include section-padding;
-  background-color: $bg-color-3; // light alternating background
-
-  .container {
-    max-width: 1100px;
-  }
-
-  .section-heading {
-    @include heading-2;
-    text-transform: none; // override if needed
-  }
-
-  .textblock-subheading {
-    @include muted-text;
-    max-width: 720px;
-    margin: 0 auto $gap-xl auto;
-    text-align: center;
-  }
-
-  // Main content wrapper
-  .textblock-content {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  // Each item row
-  .textblock-item {
-    display: flex;
-    align-items: flex-start;
-    gap: $gap-lg;
-    margin-bottom: $gap-xl;
-    padding: $gap-md;
-    border-radius: $border-radius;
-    background: $bg-color-1;
-    box-shadow: $shadow-sm;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: $shadow-md;
-      background: rgba($primary, 0.02);
-    }
-
-    // Icon column
-    .textblock-icon {
-      flex: 0 0 60px;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.2rem;
-      color: $primary;
-      background: rgba($primary, 0.08);
-      border-radius: $border-radius-sm;
-    }
-
-    // Title + optional description
-    .textblock-title-wrapper {
-      flex: 1;
-
-      .textblock-title {
-        @include heading-3;
-        margin: 0 0 0.5rem;
-        color: $font-color-1;
-        line-height: 1.4;
-      }
-
-      .textblock-desc {
-        @include body-text;
-        color: $font-color-3;
-        margin: 0;
-      }
-    }
-  }
-
-  // Optional footer text
-  .textblock-footer {
-    @include muted-text;
-    text-align: center;
-    margin-top: $gap-xl;
-    font-style: italic;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-// ────────────────────────────────────────
-// RESPONSIVE ADJUSTMENTS
-// ────────────────────────────────────────
-@include respond-to(mobile) {
-  .textblock-section {
-    padding-top: $section-padding-y-mobile;
-    padding-bottom: $section-padding-y-mobile;
-  }
-
-
-// ======================================================
-// layout/_textblock.scss – Text Block / Features List
-// Clean, modern list with icons + titles
-// ======================================================
-
-.textblock-section {
-  @include section-padding;
-  background-color: $bg-color-3; // light alternating background
-
-  .container {
-    max-width: 1100px;
-  }
-
-  .section-heading {
-    @include heading-2;
-    text-transform: none; // override if needed
-  }
-
-  .textblock-subheading {
-    @include muted-text;
-    max-width: 720px;
-    margin: 0 auto $gap-xl auto;
-    text-align: center;
-  }
-
-  // Main content wrapper
-  .textblock-content {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  // Each item row
-  .textblock-item {
-    display: flex;
-    align-items: flex-start;
-    gap: $gap-lg;
-    margin-bottom: $gap-xl;
-    padding: $gap-md;
-    border-radius: $border-radius;
-    background: $bg-color-1;
-    box-shadow: $shadow-sm;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: $shadow-md;
-      background: rgba($primary, 0.02);
-    }
-
-    // Icon column
-    .textblock-icon {
-      flex: 0 0 60px;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.2rem;
-      color: $primary;
-      background: rgba($primary, 0.08);
-      border-radius: $border-radius-sm;
-    }
-
-    // Title + optional description
-    .textblock-title-wrapper {
-      flex: 1;
-
-      .textblock-title {
-        @include heading-3;
-        margin: 0 0 0.5rem;
-        color: $font-color-1;
-        line-height: 1.4;
-      }
-
-      .textblock-desc {
-        @include body-text;
-        color: $font-color-3;
-        margin: 0;
-      }
-    }
-  }
-
-  // Optional footer text
-  .textblock-footer {
-    @include muted-text;
-    text-align: center;
-    margin-top: $gap-xl;
-    font-style: italic;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-// ────────────────────────────────────────
-// RESPONSIVE ADJUSTMENTS
-// ────────────────────────────────────────
-@include respond-to(mobile) {
-  .textblock-section {
-    padding-top: $section-padding-y-mobile;
-    padding-bottom: $section-padding-y-mobile;
-  }
-
-// ======================================================
-// layout/_textblock.scss – Text Block / Features List
-// Clean, modern list with icons + titles
-// ======================================================
-
-.textblock-section {
-  @include section-padding;
-  background-color: $bg-color-3; // light alternating background
-
-  .container {
-    max-width: 1100px;
-  }
-
-  .section-heading {
-    @include heading-2;
-    text-transform: none; // override if needed
-  }
-
-  .textblock-subheading {
-    @include muted-text;
-    max-width: 720px;
-    margin: 0 auto $gap-xl auto;
-    text-align: center;
-  }
-
-  // Main content wrapper
-  .textblock-content {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  // Each item row
-  .textblock-item {
-    display: flex;
-    align-items: flex-start;
-    gap: $gap-lg;
-    margin-bottom: $gap-xl;
-    padding: $gap-md;
-    border-radius: $border-radius;
-    background: $bg-color-1;
-    box-shadow: $shadow-sm;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: $shadow-md;
-      background: rgba($primary, 0.02);
-    }
-
-    // Icon column
-    .textblock-icon {
-      flex: 0 0 60px;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.2rem;
-      color: $primary;
-      background: rgba($primary, 0.08);
-      border-radius: $border-radius-sm;
-    }
-
-    // Title + optional description
-    .textblock-title-wrapper {
-      flex: 1;
-
-      .textblock-title {
-        @include heading-3;
-        margin: 0 0 0.5rem;
-        color: $font-color-1;
-        line-height: 1.4;
-      }
-
-      .textblock-desc {
-        @include body-text;
-        color: $font-color-3;
-        margin: 0;
-      }
-    }
-  }
-
-  // Optional footer text
-  .textblock-footer {
-    @include muted-text;
-    text-align: center;
-    margin-top: $gap-xl;
-    font-style: italic;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-// ────────────────────────────────────────
-// RESPONSIVE ADJUSTMENTS
-// ────────────────────────────────────────
-@include respond-to(mobile) {
-  .textblock-section {
-    padding-top: $section-padding-y-mobile;
-    padding-bottom: $section-padding-y-mobile;
-  }
-
-// ======================================================
-// layout/_textblock.scss – Text Block / Features List
-// Clean, modern list with icons + titles
-// ======================================================
-
-.textblock-section {
-  @include section-padding;
-  background-color: $bg-color-3; // light alternating background
-
-  .container {
-    max-width: 1100px;
-  }
-
-  .section-heading {
-    @include heading-2;
-    text-transform: none; // override if needed
-  }
-
-  .textblock-subheading {
-    @include muted-text;
-    max-width: 720px;
-    margin: 0 auto $gap-xl auto;
-    text-align: center;
-  }
-
-  // Main content wrapper
-  .textblock-content {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  // Each item row
-  .textblock-item {
-    display: flex;
-    align-items: flex-start;
-    gap: $gap-lg;
-    margin-bottom: $gap-xl;
-    padding: $gap-md;
-    border-radius: $border-radius;
-    background: $bg-color-1;
-    box-shadow: $shadow-sm;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: $shadow-md;
-      background: rgba($primary, 0.02);
-    }
-
-    // Icon column
-    .textblock-icon {
-      flex: 0 0 60px;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.2rem;
-      color: $primary;
-      background: rgba($primary, 0.08);
-      border-radius: $border-radius-sm;
-    }
-
-    // Title + optional description
-    .textblock-title-wrapper {
-      flex: 1;
-
-      .textblock-title {
-        @include heading-3;
-        margin: 0 0 0.5rem;
-        color: $font-color-1;
-        line-height: 1.4;
-      }
-
-      .textblock-desc {
-        @include body-text;
-        color: $font-color-3;
-        margin: 0;
-      }
-    }
-  }
-
-  // Optional footer text
-  .textblock-footer {
-    @include muted-text;
-    text-align: center;
-    margin-top: $gap-xl;
-    font-style: italic;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-// ────────────────────────────────────────
-// RESPONSIVE ADJUSTMENTS
-// ────────────────────────────────────────
 @include respond-to(mobile) {
   .textblock-section {
     padding-top: $section-padding-y-mobile;

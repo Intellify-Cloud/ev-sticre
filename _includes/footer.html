@@ -1,7 +1,8 @@
-<footer>
+<footer id="footer">
   <div class="container">
     <div class="footer-content">
-      <!-- Brand / about -->
+
+      <!-- Brand / About -->
       <div class="footer-brand">
         <a href="{{ site.baseurl }}/" class="logo">
           {% if site.logo %}
@@ -13,7 +14,7 @@
         <!-- <p class="tagline">{{ site.description | default: "Professional property finance solutions" }}</p> -->
       </div>
 
-      <!-- Quick links -->
+      <!-- Quick Links -->
       <div class="footer-links">
         <h5>Quick Links</h5>
         <ul>
@@ -25,7 +26,7 @@
         </ul>
       </div>
 
-      <!-- More links (e.g. legal) -->
+      <!-- Company Links -->
       <div class="footer-links">
         <h5>Company</h5>
         <ul>
@@ -35,21 +36,24 @@
         </ul>
       </div>
 
-      <!-- Contact & social -->
+      <!-- Contact & Social -->
       <div class="footer-contact">
         <h5>Get in Touch</h5>
+
         <div class="contact-item">
           <div class="icon"><i class="fas fa-phone"></i></div>
           <div class="info">
             <a href="tel:+2781406395">+27 81 406 395</a>
           </div>
         </div>
+
         <div class="contact-item">
           <div class="icon"><i class="fas fa-envelope"></i></div>
           <div class="info">
             <a href="mailto:sterling@evogroup.co.za">sterling@evogroup.co.za</a>
           </div>
         </div>
+
         <div class="contact-item">
           <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
           <div class="info">
@@ -64,41 +68,50 @@
           <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
         </div>
       </div>
+
+    </div> <!-- /.footer-content -->
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp">
+      <a href="https://api.whatsapp.com/send?phone=27814063958" target="_blank">
+        <h4><i class="fab fa-whatsapp fa-2x" aria-hidden="true"></i></h4>
+      </a>
     </div>
 
+    <!-- Floating WhatsApp Chat -->
+    <div class="whatsapp-float">
+      <a 
+        href="https://api.whatsapp.com/send?phone=27814063958&text=Hi%20Sterling%20Crest%2C%20I%20need%20help%20with%20a%20home%20loan" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Chat with us on WhatsApp"
+      >
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip">Chat with us</span>
+      </a>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.company }} - Expert in Bond Origination & Home Loans | Durban. All rights reserved. Powered by <a href="{{ site.evo_url }}">{{ site.group }}</a>.</p>
+    </div>
+
+  </div> <!-- /.container -->
+
+  <!-- JavaScript -->
+  <script>
     function fixPageShort() {
       if (window.innerHeight > document.body.offsetHeight) {
-        document.getElementById("footer").style.position = "fixed";
-        document.getElementById("footer").style.bottom = 0;
-        document.getElementById("footer").style.right = 0;
-        document.getElementById("footer").style.left = 0;
-        document.getElementById("footer").style.width = "100%";
+        const footer = document.getElementById("footer");
+        footer.style.position = "fixed";
+        footer.style.bottom = 0;
+        footer.style.right = 0;
+        footer.style.left = 0;
+        footer.style.width = "100%";
       }
     }
+    window.addEventListener('load', fixPageShort);
+    window.addEventListener('resize', fixPageShort);
   </script>
-  {% endif %}
 
-  <div class="whatsapp">
-    <a href="https://api.whatsapp.com/send?phone=27814063958" target="_blank">
-      <h4><i class="fab fa-whatsapp fa-2x " aria-hidden="true"></i></h4>Chat
-    </a>
-    <!-- <a href="https://api.whatsapp.com/send?phone=15551234567">Send Message</a> -->
-
-<div class="footer-bottom">
-  <p>&copy; {{ 'now' | date: "%Y" }} {{ site.company }} - Expert in Bond Origination & Home Loans | Durban. All rights reserved. Powered by <a href="{{ site.evo_url }}">{{ site.group }}</a>.</p>
-</div>
-    <!-- Floating WhatsApp Chat Button -->
-<div class="whatsapp-float">
-  <a 
-    href="https://api.whatsapp.com/send?phone=27814063958&text=Hi%20Sterling%20Crest%2C%20I%20need%20help%20with%20a%20home%20loan" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    aria-label="Chat with us on WhatsApp"
-  >
-    <i class="fab fa-whatsapp"></i>
-    <span class="tooltip">Chat with us</span>
-  </a>
-</div>
-  </div>
-  
 </footer>

@@ -1,17 +1,15 @@
-// Golden ratio constant
-$phi: 1.6180339887;
-$phi-inverse: 0.6180339887;   // ≈ 61.8%
-
-// Base spacing unit (feel free to adjust)
-$base-spacing: 1.5rem;
+// ======================================================
+// layout/_hero.scss – Modern Hero / Masthead
+// Material-inspired + Golden Ratio proportions
+// ======================================================
 
 header.masthead {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 85vh;
-  height: 90vh;                 // modern full-ish hero feel
+  min-height: 80vh;
+  height: 90vh;
   text-align: center;
   color: white;
   background-image: url("#{$header-image}");
@@ -20,113 +18,132 @@ header.masthead {
   background-repeat: no-repeat;
   overflow: hidden;
 
-  // Dark overlay
+  // Darker overlay for better text contrast (modern trend)
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.38);   // slightly stronger for contrast
+    background: rgba(15, 23, 42, 0.55); // deep slate overlay – works with $font-color-1
     z-index: 1;
   }
 
   .container {
     position: relative;
     z-index: 2;
-    width: 100%;
-    max-width: 1100px;
+    max-width: 1200px;
     padding: 0 1.5rem;
+    width: 100%;
   }
 
   .intro-text {
+    @include center-content;
     max-width: 900px;
     margin: 0 auto;
-
-    // Using flex + pseudo spacing helps rhythm
-    display: flex;
-    flex-direction: column;
-    gap: $base-spacing * $phi-inverse; // ~0.618 × base
+    gap: $gap-lg;           // golden-ratio-aware spacing
   }
 
   .intro-lead-in {
-    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    @include muted-text;
     font-style: italic;
-    line-height: 1.4;
-    margin: 0;
-    @include serif-font;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    color: rgba(white, 0.9);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
   }
 
   .intro-heading {
-    font-size: clamp(2.8rem, 8vw, 5rem);
-    font-weight: 800;
-    line-height: 1.1;
+    @include heading-1;
+    color: white;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.7);
     margin: 0;
-    @include heading-font;
-    text-shadow: 0 3px 12px rgba(0,0,0,0.6);
-
-    // Golden ratio relationship with lead-in
-    // If you want stricter scaling → font-size: calc(var(--lead-font) * #{$phi});
   }
 
-  // Optional CTA button styling with golden feeling
-  .btn-xl {
-    margin-top: $base-spacing * $phi; // larger top spacing
-    padding: 0.9rem 2.2rem;
+  // Call-to-action button – using our new btn-primary mixin
+  .btn-xl,
+  .btn-primary {
+    @include btn-primary;
+    padding: 1.1rem 2.6rem;
     font-size: 1.25rem;
+    margin-top: $gap-md;
+    box-shadow: $shadow-lg;
+  }
+
+  // Optional subtle content card/elevation effect (Material feel)
+  .intro-content-wrapper {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    border-radius: $border-radius;
+    padding: $gap-xl;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: $shadow-md;
   }
 }
 
 // ────────────────────────────────────────
-// Breakpoints – cleaner, more modern sizing
+// RESPONSIVE BREAKPOINTS
 // ────────────────────────────────────────
-
-@media (min-width: 1200px) {
+@include respond-to(mobile) {
   header.masthead {
-    height: 70vh;
-  }
-
-  .intro-heading   { font-size: clamp(4.5rem, 7vw, 7.2rem); }
-  .intro-lead-in   { font-size: clamp(2rem, 3vw, 3.2rem); }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  header.masthead {
-    height: 70vh;
-  }
-
-  .intro-heading   { font-size: clamp(3.8rem, 6.5vw, 5.8rem); }
-  .intro-lead-in   { font-size: clamp(1.8rem, 2.8vw, 2.8rem); }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  header.masthead {
-    height: 85vh;
-  }
-
-  .intro-heading   { font-size: clamp(3.2rem, 6vw, 4.8rem); }
-  .intro-lead-in   { font-size: clamp(1.5rem, 2.5vw, 2.4rem); }
-}
-
-@media (max-width: 767.98px) {
-  header.masthead {
-    height: 80vh;
     min-height: 70vh;
+    height: 85vh;
     align-items: center;
   }
 
   .intro-text {
     padding: 0 1rem;
+    gap: $gap-md;
   }
 
-  .intro-heading   { font-size: clamp(2.4rem, 7vw, 3.6rem); line-height: 1.15; }
-  .intro-lead-in   { font-size: clamp(1.2rem, 4vw, 1.6rem); }
+  .intro-heading {
+    font-size: clamp(2.4rem, 8vw, 3.8rem);
+    line-height: 1.15;
+  }
+
+  .intro-lead-in {
+    font-size: clamp(1.2rem, 4.5vw, 1.7rem);
+  }
+
+  .btn-xl,
+  .btn-primary {
+    padding: 0.9rem 2rem;
+    font-size: 1.1rem;
+  }
 }
 
-@media (max-width: 480px) {
+@include respond-to(tablet) {
+  header.masthead {
+    height: 85vh;
+  }
+
+  .intro-heading {
+    font-size: clamp(3.2rem, 7vw, 5rem);
+  }
+
+  .intro-lead-in {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+  }
+}
+
+@include respond-to(desktop) {
+  header.masthead {
+    height: 80vh;
+    min-height: 70vh;
+  }
+
+  .intro-heading {
+    font-size: clamp(4.5rem, 7vw, 6.5rem);
+  }
+
+  .intro-lead-in {
+    font-size: clamp(1.8rem, 2.8vw, 2.6rem);
+  }
+}
+
+// Extra-large screens
+@media (min-width: 1400px) {
   header.masthead {
     height: 75vh;
   }
 
-  .intro-heading   { font-size: clamp(2rem, 8vw, 2.9rem); }
-  .intro-lead-in   { font-size: clamp(1rem, 3.5vw, 1.35rem); }
+  .intro-heading {
+    font-size: clamp(5rem, 6vw, 7.5rem);
+  }
 }
