@@ -17,6 +17,9 @@ site:
 site:
   description: "HEllo"
 
+site:
+  description: "HEllo"
+
 services:
   title: "Services We Offer"
   text: "We get you the most competitive rate by sourcing quotes from the banks for you to compare."
@@ -175,6 +178,7 @@ team:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     #- name: "Jacqueline Almond"
     #  role: "Property Finance Specialist"
     #  image: assets/img/team/Jacqueline Almond Sterling Crest.jpg
@@ -187,6 +191,8 @@ team:
         #- url: https://za.linkedin.com/in/Angela-macey-homeloans
         #  icon: fab fa-linkedin-in0
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -352,6 +358,7 @@ footer:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   legal: "Powered by evo Homeloans"
   social:
     #- url: https://twitter.com/Angela_macey
@@ -364,6 +371,8 @@ footer:
       icon: "fab fa-whatsapp"
     # - url: https://instagram.com
     #   icon: "fab fa-instagram"
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
