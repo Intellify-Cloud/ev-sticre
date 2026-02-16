@@ -173,12 +173,6 @@ team:
   section: team
   contact:
   people:
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
     #- name: "Jacqueline Almond"
     #  role: "Property Finance Specialist"
     #  image: assets/img/team/Jacqueline Almond Sterling Crest.jpg
@@ -191,18 +185,6 @@ team:
         #- url: https://za.linkedin.com/in/Angela-macey-homeloans
         #  icon: fab fa-linkedin-in0
 
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     - name: "Jane Maguire Odendaal"
       role: "Property Finance Specialist"
       image: assets/img/team/Jane Maguire Sterling Crest.jpg
@@ -353,12 +335,6 @@ contact:
   section: team
 
 footer:
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   legal: "Powered by evo Homeloans"
   social:
     #- url: https://twitter.com/Angela_macey
